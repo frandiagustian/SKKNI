@@ -3,6 +3,15 @@
 include "fungsi/fungsi.php";
 
 ?>
+<script language='javascript'>
+function angka(a)
+{
+	if(!/^[0-9.]+$/.test(a.value))
+	{
+	a.value = a.value.substring(0,a.value.length-1000);
+	}
+}
+</script>
 <html>
 <head>
 
@@ -74,7 +83,7 @@ javascript voice -->
                                                 <input type="text" name="txt1" class="txt" onkeyup='angka(this)' placeholder="Input Bilangan Pertama" required>
 </td>
 <td>
-                                                <input type="text" name="txt2" class="txt" onkeyup='angka(this)'placeholder="Input Bilangan Kedua" required>
+                                                <input type="text" name="txt2" class="txt" onkeyup='angka(this)' placeholder="Input Bilangan Kedua" required>
 </td>
 												
 												</tr>
@@ -124,15 +133,6 @@ function play (){
     }
    );
   }
-</script>
-<script language='javascript'>
-function angka(a)
-{
-	if(!/^[0-9.]+$/.test(a.value))
-	{
-	a.value = a.value.substring(0,a.value.length-1000);
-	}
-}
 </script>
                                 <?php }else{ ?>
 
