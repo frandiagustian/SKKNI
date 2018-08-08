@@ -68,10 +68,17 @@ javascript voice -->
 
                                 <form method="post" action="index.php" >                                      
 												<center>
+												<table>
+												<tr>
+												<td>
                                                 <input type="text" name="txt1" class="txt" placeholder="Input Bilangan Pertama">
-
+</td>
+<td>
                                                 <input type="text" name="txt2" class="txt" placeholder="Input Bilangan Kedua">
-
+</td>
+												
+												</tr>
+												</table>
                                                 <select class="operator" name="operator">
 
                                                                 <option value="tambah"> + </option>
@@ -92,11 +99,19 @@ javascript voice -->
 </center>
                                 <?php if(isset($_POST['hitung'])){ ?>
 <center>
+<table>
+<td><a>Skema Aritmatika</a>
                                                 <input type="text" value="<?php echo $txt1; ?> <?php echo $operator; ?> <?php echo $txt2; ?>" class="txt">
+</td>
+												<td><a>Hasil</a>
 												<input type="text" value="<?php echo $hasil; ?>" class="txt"> 
+</td>
+												<tr><td><a>Terbilang</a>
                                                 <textarea class="txt"><?php echo terbilang($hasil); ?></textarea>
-												<button onclick="play();">Play</button>
-</center>
+</td></tr>												
+												<td><button onclick="play();">Play</button></td>
+</table>
+												</center>
 <script>
 function play (){
    responsiveVoice.speak(
