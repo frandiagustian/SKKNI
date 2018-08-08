@@ -1,3 +1,5 @@
+<title>Laporan</title>
+
 <?php
 include '../config/koneksi.php';
 ?>

@@ -1,38 +1,21 @@
--- phpMyAdmin SQL Dump
--- version 3.1.1
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Aug 08, 2018 at 03:45 AM
--- Server version: 5.1.30
--- PHP Version: 5.2.8
+===Database skkni
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+== Table structure for table peserta
 
---
--- Database: `skkni`
---
+|------
+|Field|Type|Null|Default
+|------
+|nama|varchar(40)|Yes|NULL
+|//**nik**//|varchar(16)|Yes|NULL
+|hp|varchar(13)|Yes|NULL
+|email|varchar(30)|Yes|NULL
+|skema_sertifikasi|varchar(25)|Yes|NULL
+|tempat_uji_kompetensi|varchar(15)|Yes|NULL
+|rekomendasi|varchar(20)|Yes|NULL
+|tanggal_terbit_sertifikat|date|Yes|NULL
+|tanggal_lahir|date|Yes|NULL
+|organisasi|varchar(35)|Yes|NULL
+== Dumping data for table peserta
 
--- --------------------------------------------------------
-
---
--- Table structure for table `peserta`
---
-
-CREATE TABLE IF NOT EXISTS `peserta` (
-  `nama` varchar(40) NOT NULL,
-  `nik` varchar(16) NOT NULL,
-  `hp` varchar(13) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `skema_sertifikasi` varchar(25) NOT NULL,
-  `tempat_uji_kompetensi` varchar(15) NOT NULL,
-  `rekomendasi` varchar(20) NOT NULL,
-  `tanggal_terbit_sertifikat` date NOT NULL,
-  `tanggal_lahir` date NOT NULL,
-  `organisasi` varchar(35) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `peserta`
---
-
+|Frandi Agustian|1572012408910001|085266258606|frandiagustian@gmail.com|Programming|Jambi|SKKNI|2018-08-12|1991-08-24|UPI &quot;YPTK&quot; Padang
+|Mikson M. Philiang|1572012408910002|085266258605|mikson@gmail.com|Networking|Jambi|SKKNI|2018-08-13|1994-09-13|STMIK Jayanusa
