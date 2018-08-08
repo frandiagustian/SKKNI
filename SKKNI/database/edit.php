@@ -12,11 +12,21 @@ $tanggal_terbit_sertifikat       = $_POST['tanggal_terbit_sertifikat'];
 $tanggal_lahir                   = $_POST['tanggal_lahir'];
 $organisasi                      = $_POST['organisasi'];
 $alamat                          = $_POST['alamat'];
-
 // query SQL untuk insert data
-$input = mysql_query("INSERT INTO peserta VALUES ('$nama','$nik','$hp','$email','$skema_sertifikasi','$tempat_uji_kompetensi','$recomendasi','$tanggal_terbit_sertifikat','$tanggal_lahir','$organisasi','$alamat')");
+$input = mysql_query("update peserta set nama='$nama',
+											hp='$hp',
+											email='$email',
+											skema_sertifikasi='$skema_sertifikasi',
+											tempat_uji_kompetensi='$tempat_uji_kompetensi',
+											rekomendasi='$recomendasi',
+											tanggal_terbit_sertifikat='$tanggal_terbit_sertifikat',
+											tanggal_lahir='$tanggal_lahir',
+											organisasi='$organisasi' ,
+											alamat='$alamat' 
+											where 
+											nik='$nik'") or die(mysql_error());
 // mengalihkan ke halaman index.php
 if ($input) {
-	header('location:index.php?pesan=yes');
+	header('location:laporan/data_peserta.php?a=e');
 	}
 ?>

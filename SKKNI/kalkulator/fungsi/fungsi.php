@@ -14,10 +14,10 @@
 function terbilang($bilangan)
 {
     $angka = array('0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',
-        '0', '0', '0');
+        '0', '0', '0', '-');
     $kata = array('', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh',
-        'delapan', 'sembilan');
-    $tingkat = array('', 'ribu', 'juta', 'milyar', 'triliun');
+        'delapan', 'sembilan', 'minus');
+    $tingkat = array('', 'ribu', 'juta', 'milyar', 'triliun', 'minus');
 
     $panjang_bilangan = strlen($bilangan);
 

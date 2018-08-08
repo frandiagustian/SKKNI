@@ -44,24 +44,28 @@ javascript voice -->
                                                                 case 'tambah':
 
                                                                                 $hasil = $txt1+$txt2;
+																				$op = '+';
 
                                                                 break;
 
                                                                 case 'kurang':
 
                                                                                 $hasil = $txt1-$txt2;
+																				$op = '-';
 
                                                                 break;
 
                                                                 case 'kali':
 
                                                                                 $hasil = $txt1*$txt2;
+																				$op = 'x';
 
                                                                 break;
 
                                                                 case 'bagi':
 
                                                                                 $hasil = $txt1/$txt2;
+																				$op = ':';
 
                                                                 break;                                  
 
@@ -110,13 +114,13 @@ javascript voice -->
 <center>
 <table>
 <td><a>Skema Aritmatika</a>
-                                                <input type="text" value="<?php echo $txt1; ?> <?php echo $operator; ?> <?php echo $txt2; ?>" class="txt">
+                                                <input type="text" disabled value="<?php echo $txt1; ?> <?php echo $op; ?> <?php echo $txt2; ?>" class="txt">
 </td>
 												<td><a>Hasil</a>
-												<input type="text" value="<?php echo $hasil; ?>" class="txt"> 
+												<input type="text" disabled value="<?php echo $hasil; ?>" class="txt"> 
 </td>
 												<tr><td><a>Terbilang</a>
-                                                <textarea class="txt"><?php echo terbilang($hasil); ?></textarea>
+                                                <textarea disabled class="txt"><?php echo terbilang($hasil); ?></textarea>
 </td></tr>												
 												<td><button onclick="play();">Play</button></td>
 </table>

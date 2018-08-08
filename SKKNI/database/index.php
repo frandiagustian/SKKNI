@@ -8,25 +8,57 @@ include "config/function.php";
 SKKNI
 </title>
 <head>
-<center><h1>INPUT PESERTA SERTIFIKASI</a></h1></center>
 </head>
 <body>
- 
 <form method="post"  action="simpan.php" validate>
-<center>
-<table border='1'>
+<center><br>
+<table border='0'>
+<td colspan='2'><div><img src="Gambar/SKKNI.jpg" width="230" height="130" /></div></td>
+<td colspan='5'><center><h1>INPUT PESERTA SERTIFIKASI</h1></center></td>
+<td colspan='2'><div><img src="Gambar/logo-kominfo-copy.jpg" width="230" height="130" /></div></td>
+<tr>
+<td height=30 colspan=8></td>
+</tr>
+<tr>
+<td width=15></td>
+<td><a value="laporan"><a href="laporan/data_peserta.php">DATA PESERTA</a></td>
 <td>Nama</td>
 <td><input type="text" name="nama" value="" required ></td>
+<td width=20></td>
+<td>Tempat Uji Kompetensi</td>
+<td><input type="text" name="tempat_uji_kompetensi" value="" required></td>
+<td colspan='2'></td>
+</tr>
 <tr>
+<td></td>
+<td><a value="laporan"><a href="laporan/data_peserta.php">LAPORAN</a></td>
 <td>NIK</td>
 <td><input type="text" name="nik" onkeyup='angka(this)' placeholder="harus angka"  required ></td>
+<td></td>
+<td>Rekomendasi</td>
+<td><input type="text" name="recomendasi" value="" required></td>
+<td></td>
 <tr>
+<td></td>
+<td></td>
 <td>HP</td>
 <td><input type="text" name="hp" onkeyup='angka(this)' placeholder="harus angka" required ></td>
+<td></td>
+<td>Tanggal Terbit Sertifikat</td>
+<td><input type="date" name="tanggal_terbit_sertifikat" value="" required></td>
+<td></td>
 <tr>
+<td></td>
+<td></td>
 <td>Email</td>
 <td><input type="text" name="email" value="" required></td>
+<td></td>
+<td>Tanggal Lahir</td>
+<td><input type="date" name="tanggal_lahir" value="" required></td>
+<td></td>
 <tr>
+<td></td>
+<td></td>
 <td>Skema Sertifikasi</td>
 <td>
 <select name="skema_sertifikasi" required>
@@ -36,28 +68,19 @@ SKKNI
                             <option value="Multimedia">Multimedia</option>
                         </select>
 						</td>
-<tr>
-<td>Tempat Uji Kompetensi</td>
-<td><input type="text" name="tempat_uji_kompetensi" value="" required></td>
-<tr>
-<td>Rekomendasi</td>
-<td><input type="text" name="recomendasi" value="" required></td>
-<tr>
-<td>Tanggal Terbit Sertifikat</td>
-<td><input type="date" name="tanggal_terbit_sertifikat" value="" required></td>
-<tr>
-<td>Tanggal Lahir</td>
-<td><input type="date" name="tanggal_lahir" value="" required></td>
-<tr>
-<td>Organisasi</td>
+						<td></td>
+						<td>Organisasi</td>
 <td><input type="text" name="organisasi" value="" required></td>
-  </tr>
-<tr><td colspan="2"><center><button type="submit" value="simpan">SIMPAN</button></center></td></tr>
-<tr><td colspan="2"><center>
-<a value="laporan"><a href="laporan/data_peserta.php" target='_new'>LAPORAN DATA PESERTA</a>
-</center></td></tr>
-
-
+<td></td>
+<tr>
+<td></td>
+<td></td>
+<td>Alamat</td>
+<td><input type="text" name="alamat" value="" required></td>
+<td colspan="2"><button type="submit" value="simpan">SIMPAN</button></td>
+<td></td>
+<td></td>
+</tr>
 </table>
 <?php 
  if (isset($_GET['pesan'])){
@@ -68,9 +91,6 @@ SKKNI
 	
  } 
 ?>
-</form>
-<div><img src="Gambar/SKKNI.jpg" width="230" height="130" /></div>
-<br>
 </center>
 </body>
 
