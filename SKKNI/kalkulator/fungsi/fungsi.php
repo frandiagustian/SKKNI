@@ -14,10 +14,10 @@
 function terbilang($bilangan)
 {
     $angka = array('0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0',
-        '0', '0', '0', '-');
+        '0', '0', '0');
     $kata = array('', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh',
         'delapan', 'sembilan');
-    $tingkat = array('', 'ribu', 'juta', 'milyar', 'triliun',);
+    $tingkat = array('', 'ribu', 'juta', 'milyar', 'triliun');
 
     $panjang_bilangan = strlen($bilangan);
 
@@ -47,9 +47,9 @@ function terbilang($bilangan)
         $kata1 = "";
         $kata2 = "";
         $kata3 = "";
-		
+
         /* untuk ratusan */
-        if ($angka[$i + 2] >= "1")
+        if ($angka[$i + 2] != "0")
         {
             if ($angka[$i + 2] == "1")
             {
@@ -60,13 +60,9 @@ function terbilang($bilangan)
                 $kata1 = $kata[$angka[$i + 2]] . " ratus";
             }
         }
-							else
-            {
-                $kata1 = $kata[$angka[$i + 2]] . " minus";
-            }
 
         /* untuk puluhan atau belasan */
-        if ($angka[$i + 1] >= "1")
+        if ($angka[$i + 1] != "0")
         {
             if ($angka[$i + 1] == "1")
             {
@@ -88,10 +84,6 @@ function terbilang($bilangan)
                 $kata2 = $kata[$angka[$i + 1]] . " puluh";
             }
         }
-		else
-            {
-                $kata2 = $kata[$angka[$i + 1]] . " minus";
-            }
 
         /* untuk satuan */
         if ($angka[$i] != "0")

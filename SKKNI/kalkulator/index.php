@@ -11,7 +11,7 @@ javascript voice -->
 <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script> <script type="text/javascript">
   
  </script>
-                <title>Membuat Kalkulator Sederhana Menggunakan PHP</title>
+                <title>Fungsi Aritmatika</title>
                 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -66,15 +66,15 @@ javascript voice -->
 
                                 <h1 class="judul">FUNGSI ARITMATIKA</h1>
 
-                                <form method="post" action="index.php" >                                      
+                                <form method="post" action="index.php" validate>                                      
 												<center>
 												<table>
 												<tr>
 												<td>
-                                                <input type="text" name="txt1" class="txt" placeholder="Input Bilangan Pertama">
+                                                <input type="text" name="txt1" class="txt" onkeyup='angka(this)' placeholder="Input Bilangan Pertama" required>
 </td>
 <td>
-                                                <input type="text" name="txt2" class="txt" placeholder="Input Bilangan Kedua">
+                                                <input type="text" name="txt2" class="txt" onkeyup='angka(this)'placeholder="Input Bilangan Kedua" required>
 </td>
 												
 												</tr>
@@ -93,7 +93,7 @@ javascript voice -->
 												
                                                 <input   type="submit" name="hitung" value="HITUNG" class="tombol" >
 
-                                                <input type="submit" name="reset" value="RESET" class="tombol">                                                                                                                                                                    
+                                                <input type="submit" name="reset" value="RESET" class="tombol" formnovalidate>                                                                                                                                                                    
 
                                 </form>
 </center>
@@ -124,7 +124,16 @@ function play (){
     }
    );
   }
-</script> 
+</script>
+<script language='javascript'>
+function angka(a)
+{
+	if(!/^[0-9.]+$/.test(a.value))
+	{
+	a.value = a.value.substring(0,a.value.length-1000);
+	}
+}
+</script>
                                 <?php }else{ ?>
 
 	<?php } ?>                                         

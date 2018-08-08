@@ -46,5 +46,8 @@ $query_mysql = mysql_query("SELECT * FROM peserta order by tanggal_lahir")or die
 				?>
                       </tbody>
                     </table>
+					Jumlah Peserta Yang Terdaftar : <?=$nomor-1?>
 					</center>
+					
+					
 					          
